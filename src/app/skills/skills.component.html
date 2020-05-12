@@ -1,0 +1,105 @@
+<div class="container-fluid">
+    <br>
+    <h2 style="text-align: center;"><fa-icon [icon]="faQuoteLeft" size="x" [styles]="{'color': 'black'}"></fa-icon> They say if you want tell a story right,
+        you gotta start at the beginning <fa-icon [icon]="faQuoteRight" size="x" [styles]="{'color': 'black'}"></fa-icon></h2>
+    <h5 style="text-align: right;">--Birds of Prey</h5>
+    <div style="text-align: center;">
+        <button class="btn btn-outline-dark " *ngIf="!birthday" (click)="bday()">Shall we...?</button>
+    </div>
+    <br>
+    <div class="row" *ngIf="birthday" [@divstate]="state">
+        <div class="col-md" style="text-align: center;">
+            <fa-icon [icon]="faBirthdayCake" size="3x" [spin]="false"[styles]="{'color':'pink'}"></fa-icon>
+            <h2>11 February</h2>
+            <h6> <fa-icon [icon]="faCalendar" size=x [styles]="{'color':'grey'}"></fa-icon> 90's Kid </h6>
+            <h6> <fa-icon [icon]="faLocationArrow" size=x [styles]="{'color':'grey'}"></fa-icon> Jabalpur, Madhya Pradesh</h6>
+        </div>
+    </div>
+        <br>
+        <div *ngIf="birthday" style="text-align: center;" >
+            <button class="btn btn-outline-dark " *ngIf="!school1" (click)="school()">more...</button>
+        </div>
+        <br>
+    <div class="row" style="text-align: center;" *ngIf="school1" [@divstate]="state">
+        <div class="col-md">
+            <fa-icon [icon]="faSchool" size="2x" [styles]="{'color':'skyblue'}"></fa-icon>
+            <h2>High school</h2>
+            <h6> <fa-icon [icon]="faLocationArrow" size=x [styles]="{'color':'grey'}"></fa-icon> Christ Church Senior School for Boys and Girls, Jabalpur (M.P.)</h6>
+            <h6> <fa-icon [icon]="faClock" size=x [styles]="{'color':'grey'}"></fa-icon> 2011-12</h6>
+        </div>
+        <div class="col-md">
+            <fa-icon [icon]="faSchool" size="2x" [styles]="{'color':'skyblue'}"></fa-icon>
+            <h2>Senior secondary school</h2>
+            <h6> <fa-icon [icon]="faLocationArrow" size=x [styles]="{'color':'grey'}"></fa-icon> Christ Church Senior School for Boys and Girls, Jabalpur (M.P.)</h6>
+            <h6> <fa-icon [icon]="faClock" size=x [styles]="{'color':'grey'}"></fa-icon> 2013-14</h6>
+        </div>
+        <br>
+        <div class="col-md-12">
+            <fa-icon [icon]="faUniversity" size="3x" [styles]="{'color':'lightgreen '}"></fa-icon>
+            <h2>Engineering Graduate</h2>
+            <h6> <fa-icon [icon]="faTty" size=x [styles]="{'color':'grey'}"></fa-icon> Electronics and communication</h6>
+            <h6> <fa-icon [icon]="faLocationArrow" size=x [styles]="{'color':'grey'}"></fa-icon> Hitkarini College of Engineering & Technology (R.G.P.V.), Jabalpur (M.P.).</h6>
+            <h6> <fa-icon [icon]="faClock" size=x [styles]="{'color':'grey'}"></fa-icon> 2014-18</h6>
+        </div>
+        <div class="col-md-12">
+            <br>
+            <button class="btn btn-outline-dark " *ngIf="!work" (click)="corporate()">a little more...</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row" *ngIf="work" [@divstate]="state">
+        <div class="col-md-12" style="text-align: center;">
+            <fa-icon [icon]="faBriefcase" size=3x [styles]="{'color':'violet'}"></fa-icon>
+        </div>
+        <div class="col-md-12" style="text-align: center;">
+            <h2>Wipro Technologies</h2>
+        </div>
+        <div class="col-md-12">
+            <div class="row" style="text-align: center;">
+                <div class="col-md-6">
+                    <h5> <fa-icon [icon]="faBusinessTime" size=x [styles]="{'color':'grey'}"></fa-icon> Training</h5>
+                    <h6> <fa-icon [icon]="faLocationArrow" size=x [styles]="{'color':'grey'}"></fa-icon> Hyderabad</h6>
+                    <h6> <fa-icon [icon]="faClock" size=x [styles]="{'color':'grey'}"></fa-icon> August 2018 - October 2018</h6>
+                </div>
+                <div class="col-md-6">
+                    <h5><fa-icon [icon]="faBusinessTime" size=x [styles]="{'color':'grey'}"></fa-icon> Project</h5>
+                    <h6> <fa-icon [icon]="faLocationArrow" size=x [styles]="{'color':'grey'}"></fa-icon> Mumbai</h6>
+                    <h6> <fa-icon [icon]="faClock" size=x [styles]="{'color':'grey'}"></fa-icon> November 2018 - Present (Client : Citi Bank)</h6>
+                </div>
+                <div class="col-md-12">
+                    <br>
+                    <button class="btn btn-outline-dark " *ngIf="!hobbies" (click)="end()">towards the end...</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>   
+    <div class="row" style="text-align: center;" *ngIf="hobbies" [@divstate]="state">
+        <br>
+        <br>
+        <div class="col-md-12">
+            <fa-icon [icon]="faHeart" size=3x [styles]="{'color':'red'}"></fa-icon> 
+            <h2>Hobbies</h2>
+        </div>
+        <br>
+        <div class="col-md">
+            <h5><fa-icon [icon]="faChalkboardTeacher" size=x [styles]="{'color':'grey'}"></fa-icon> Teaching</h5> 
+        </div>
+        <div class="col-md">
+            <h5><fa-icon [icon]="faTicketAlt" size=x [styles]="{'color':'grey'}"></fa-icon> Moviebuff</h5> 
+        </div>
+        <div class="col-md">
+            <h5><fa-icon [icon]="faRoute" size=x [styles]="{'color':'grey'}"></fa-icon> Travelling</h5> 
+        </div>
+        
+        <div class="col-md-12">
+            <br>
+            <button class="btn btn-outline-dark " (click)="packup()">Pack up!</button>
+            <br>
+            <br>
+            <h4>Thank You!</h4>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,83 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <h3 class="navbar-brand" >Vibhu Gautam</h3>
+  <!-- <a class="navbar-brand" href="#">Vibhu Gautam</a> -->
+  <button class="navbar-toggler hidden-md-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+    
+      <a class="nav-link" id="id01" href="https://github.com/Vibhu51" style="color: white;"><fa-icon [icon]="faGithub" size="1x" [styles]="{'color': 'white'}"></fa-icon> github</a>
+      <!-- <a class="nav-link" id="id02" href="#" ><fa-icon [icon]="faCogs" size="x" [styles]="{'color': 'white'}"></fa-icon>  Skills</a> -->
+    <a href="" class="nav-link">
+      <ul class="navbar-nav mr-auto" style="color: white;">
+        <li class="nav-item dropdown" ngbDropdown>
+          <a class="nav-link dropdown-toggle" id="id01" href="#" ngbDropdownToggle style="color: white;"><fa-icon [icon]="faCogs" size="x" [styles]="{'color': 'white'}"></fa-icon>  Skills</a>
+          <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
+            <a class="dropdown-item" href="#"> <fa-icon [icon]="faAngular" size="x" [styles]="{'color': 'red'}"></fa-icon> Angular</a>
+            <a class="dropdown-item" href="#"> <fa-icon [icon]="faHtml5" size="x" [styles]="{'color': 'orange'}"></fa-icon> HTML</a>
+            <a class="dropdown-item" href="#"> <fa-icon [icon]="faBootstrap" size="x" [styles]="{'color': 'purple'}"></fa-icon> Bootstrap</a>
+            <a class="dropdown-item" href="#"> <fa-icon [icon]="faJs" size="x" [styles]="{'color': 'yellow'}"></fa-icon> JavaScript</a>
+
+          </div>
+        </li>
+      </ul>
+    </a>
+    <a href="" class="nav-link">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown" ngbDropdown>
+          <a class="nav-link dropdown-toggle" id="id01" href="#" ngbDropdownToggle style="color: white;"><fa-icon [icon]="faFileContract" size="x" [styles]="{'color': 'white'}"></fa-icon>  Contact</a>
+          <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
+            <a class="dropdown-item" href="#"> <fa-icon [icon]="faLinkedinIn" size="x" [styles]="{'color': 'lightblue'}"></fa-icon> LinkedIn</a>
+            <a class="dropdown-item"><fa-icon [icon]="faMailchimp" size="x" [styles]="{'color': 'lightblue'}"></fa-icon> vibhugautam51@gmail.com</a>
+          </div>
+        </li>
+      </ul>
+    </a>
+  </div>
+</nav>
+<div class="container-fluid" style="height: auto" [@divstate]="state">
+  <br>
+  <h2 style="text-align: center;"> <fa-icon [icon]="faQuoteLeft" size="x" [styles]="{'color': 'grey'}"></fa-icon> Some pics to brag about...! <fa-icon [icon]="faQuoteRight" size="x" [styles]="{'color': 'grey'}"></fa-icon>  </h2>
+  <br>  
+  <ngb-carousel>
+      <ng-template ngbSlide>
+        <img src="../assets/IMG_20200303_165241 (1).jpg" alt="Random first slide" width="100%" height="auto">
+        <div class="carousel-caption" style="top: 0; bottom: auto;">
+          <blockquote class="blockquote" >
+            <p class="mb-0">Being in Mumbai, Movie buff now</p>
+            <footer class="blockquote-footer" style="color: white;">PVR,<cite title="Source Title"> Lower Parel, Aamchi Mumbai</cite></footer>
+          </blockquote>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img src="../assets/IMG_20200313_142208.jpg" alt="Random second slide" width="100%" height="auto">
+        <div class="carousel-caption" style="top: 0; bottom: auto;">
+          <blockquote class="blockquote">
+            <p class="mb-0">Roots are from Jabalpur, this place is for internal peace</p>
+            <footer class="blockquote-footer" style="color: white;">Gwarighat, <cite title="Source Title"> Jabalpur, Madhya Pradesh</cite></footer>
+          </blockquote>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img src="../assets/EFFECTS.jpg" alt="Random third slide" width="100%" height="auto">
+        <div class="carousel-caption" style="top: 0; bottom: auto;"> 
+          <blockquote class="blockquote">
+            <p class="mb-0">First office, a kid dragged out from his comfortable college life</p>
+            <footer class="blockquote-footer" style="color: white;">Mindspace, <cite title="Source Title"> Airoli, Navi Mumbai</cite></footer>
+          </blockquote>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img src="../assets/IMG_20200229_213741.jpg" alt="Random fourth slide" width="100%" height="auto">
+        <div class="carousel-caption" style="top: 0; bottom: auto;">
+          <blockquote class="blockquote">
+            <p class="mb-0">Fun fair</p>
+            <footer class="blockquote-footer" style="color: white;">Sector 3, <cite title="Source Title"> Airoli, Navi Mumbai</cite></footer>
+          </blockquote>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  <br>
+
+</div>
+<!-- <img src="../assets/Troye_Sivan_music-1510337.png" alt="Troye Sivan" width="500px" height="500px"> -->
