@@ -1,93 +1,72 @@
 import { Component, OnInit ,ElementRef} from '@angular/core';
-import {trigger, state,style, transition, animate} from '@angular/animations'
-import {faCogs,faQuoteLeft,faQuoteRight,faBirthdayCake,
-  faCalendar,faSchool,faUniversity,faBriefcase,
-  faLocationArrow,faClock,faBusinessTime,faTty,
-  faHeart,faChalkboardTeacher,faTicketAlt,faRoute} from '@fortawesome/free-solid-svg-icons'
+import {faAngular,faBootstrap,faJs,faNodeJs} from '@fortawesome/free-brands-svg-icons'
+
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css'],
-  animations:[
-    trigger('divstate',[
-      state('normal',style({
-        'opacity':1,
-        transform:'translateX(0)'
-      })),
-      transition('void=>normal',[
-        style({
-          'opacity':0,
-          transform:'translateX(-100px)'
-        }),
-        animate(700)
-      ])
-    ]
-  )
-  ]
+ 
 })
 export class SkillsComponent implements OnInit {
-  faCogs = faCogs
-  faQuoteLeft=faQuoteLeft;faQuoteRight=faQuoteRight;faBirthdayCake=faBirthdayCake
-  faCalendar=faCalendar
-  faSchool=faSchool
-  faUniversity=faUniversity
-  faBriefcase=faBriefcase
-  faLocationArrow=faLocationArrow
-  faBusinessTime=faBusinessTime
-  faChalkboardTeacher=faChalkboardTeacher
-  faRoute=faRoute
-  faTicketAlt=faTicketAlt
-  faHeart=faHeart
-  faClock=faClock
-  faTty=faTty
-  birthday=false
-  school1=false
-  work=false
-  hobbies=false
-  state=null
+  faAngular=faAngular
+  faBootstrap=faBootstrap
+  faJs=faJs
+  faNodeJs=faNodeJs
+  skills=true
+  skill=''
+  icon=''
+  a=true
+  n=true
+  j=true
+  b=true
+  arr=[]
+  currentRate=3
   constructor(element:ElementRef) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+
   }
-bday(){
-  this.birthday== false?this.birthday=true:this.birthday=false
-  setTimeout(()=>{
-    window.scrollTo(0,document.body.clientHeight);
-  },200)
-  // scrollToBottom();
-  this.state='normal'
+  node(){
+    this.skills=false
+    this.skill="Node JS"
+    this.n=false
+    this.arr.push('Built some basic projects like weather application using node JS')
+    this.arr.push('Basic understanding of routing and other features and also ExpressJS')
+    this.currentRate=2
+  }
+  javascript(){
+    this.skills=false
+    this.skill="JavaScript"
+    this.j=false
+    this.arr.push('Good understanding of features of ECMA script.')
+    this.arr.push('Good understanding of promises, async,  and other features')
+    this.arr.push('Decent knowledge on NPM, WebPack and Babel')
+    this.currentRate=3
+  }
+  angular(){
+    this.skills=false
+    this.skill="Angular"
+    this.a=false
+    this.arr.push('Decent knowledge of features of Angular and its modular design.')
+    this.arr.push('Good understanding of TypeScript.')
+    this.currentRate=3
+  }
+  bootstrap(){
+    this.skills=false
+    this.skill="Bootstrap"
+    this.b=false
+    this.arr.push('Used Bootstrap in most of the designing part.')
+    this.arr.push('Good understanding of bootstrap grid systems and another features')
+    this.currentRate=3
+  }
+
+  skillClose(){
+    this.a=true
+    this.n=true
+    this.j=true
+    this.b=true
+    this.skills=true
+    this.arr=[]
+  }
 }
 
-school(){
-  this.school1== false?this.school1=true:this.school1=false
-  setTimeout(()=>{
-    window.scrollTo(0,document.body.clientHeight);
-  },200)
-  this.state='normal'
-}
-corporate(){
-  this.work== false?this.work=true:this.work=false
-  setTimeout(()=>{
-    window.scrollTo(0,document.body.clientHeight);
-  },200)
-  this.state='normal'
-}
-
-end(){
-  this.hobbies== false?this.hobbies=true:this.hobbies=false
-  setTimeout(()=>{
-    window.scrollTo(0,document.body.clientHeight);
-  },200)
-  this.state='normal'
-}
-
-packup(){
-  
-  this.birthday=false
-  this.school1=false
-  this.work=false
-  this.hobbies=false
-  this.state=null
-  
-}
-}

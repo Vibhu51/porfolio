@@ -1,0 +1,19 @@
+<div class="container-fluid" style="text-align: center;">
+    <h1 data-aos="fade-up" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: cornsilk;">Timeline</h1>
+    <vertical-timeline >
+ 
+        <!-- Add some cards to the timeline. It works with *ngFor too -->
+       
+        <!-- If no value is passed for the date, the current time is used. -->
+        <vertical-timeline-card
+        [timeString]="time.year"
+        [dateValue]="time.date"
+        *ngFor="let time of timeLine" >
+        <br>
+        <h4 data-aos="fade-up"> {{time.detail}}</h4>
+        <h5 data-aos="fade-up">{{time.place}}</h5>
+        </vertical-timeline-card>
+       
+       
+      </vertical-timeline>
+</div>
